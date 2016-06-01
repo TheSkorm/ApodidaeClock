@@ -121,10 +121,10 @@
             <TabItem Header="OS Manual Upgrade">
                 <Grid Background="#FFFFFFFF">
                     <Label x:Name="specEsptoolLabel" Content="Specify ESP Tool flasher:" HorizontalAlignment="Left" Margin="32,36,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="specEsptoolTextBox" HorizontalAlignment="Left" Height="24" Margin="185,38,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="221"/>
+                    <TextBox x:Name="specEsptoolTextBox" HorizontalAlignment="Left" Height="24" Margin="188,38,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="218"/>
                     <Button x:Name="specEsptoolButton" Content="Choose" HorizontalAlignment="Left" Height="24" Margin="411,38,0,0" VerticalAlignment="Top" Width="82"/>
-                    <Label x:Name="specFwLabel" Content="Apodidae Clock Firmware:" HorizontalAlignment="Left" Margin="32,74,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="specFwTextBox" HorizontalAlignment="Left" Height="24" Margin="185,76,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="221"/>
+                    <Label x:Name="specFwLabel" Content="Apodidae Clock OS Image:" HorizontalAlignment="Left" Margin="32,74,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="specFwTextBox" HorizontalAlignment="Left" Height="24" Margin="188,76,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="218"/>
                     <Button x:Name="specFwButton" Content="Choose" HorizontalAlignment="Left" Height="24" Margin="411,76,0,0" VerticalAlignment="Top" Width="82"/>
                     <CheckBox x:Name="fwUpgradeDebugCheckBox" Content="Debug mode" HorizontalAlignment="Left" Height="18" Margin="42,128,0,0" VerticalAlignment="Top" Width="106"/>
                     <CheckBox x:Name="eraseFlashCheckBox" Content="Erase flash (for developer only)" HorizontalAlignment="Left" Height="18" Margin="185,128,0,0" VerticalAlignment="Top" Width="308"/>
