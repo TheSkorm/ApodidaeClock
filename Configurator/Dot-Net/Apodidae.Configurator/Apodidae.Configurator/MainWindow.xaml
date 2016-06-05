@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Apodidae.Configurator"
-        mc:Ignorable="d" Height="364" Width="865.5" Title="Apodidae Configurator" ResizeMode="CanMinimize">
+        mc:Ignorable="d" Height="352" Width="860" Title="MyApodidae For Windows Classic Desktop" ResizeMode="CanMinimize">
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="322" VerticalAlignment="Top" Width="520">
             <TabItem Header="Start">
@@ -25,7 +25,18 @@
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Time settings">
+            <TabItem Header="WiFi">
+                <Grid Background="#FFFFFFFF">
+                    <CheckBox x:Name="passwdRequiredCheckBox" Content="WiFi network requires password (WPA/WPA2 encryption only)" HorizontalAlignment="Left" Margin="81,124,0,0" VerticalAlignment="Top" Width="349" IsChecked="True" />
+                    <TextBox x:Name="wifiEssidTextBox" HorizontalAlignment="Left" Height="22" Margin="206,56,0,0" TextWrapping="Wrap" Text="hu-home" VerticalAlignment="Top" Width="196"/>
+                    <Label x:Name="wifiEssidLabel" Content="WiFi Name (ESSID):" HorizontalAlignment="Left" Margin="81,52,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="wifiPasswordTextBox" HorizontalAlignment="Left" Height="22" Margin="206,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196"/>
+                    <Label x:Name="wifiPasswordLabel" Content="WiFi Password:" HorizontalAlignment="Left" Margin="81,83,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="button" Content="Save settings" HorizontalAlignment="Left" Height="51" Margin="81,203,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Button x:Name="button_Copy" Content="Reset settings" HorizontalAlignment="Left" Height="51" Margin="252,203,0,0" VerticalAlignment="Top" Width="150"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Time">
                 <Grid Background="#FFFFFFFF">
                     <Button x:Name="timeSettingSaveButton" Content="Save settings" HorizontalAlignment="Left" Height="56" Margin="254,228,0,0" VerticalAlignment="Top" Width="150"/>
                     <Button x:Name="timeSettingResetButton" Content="Reset settings" HorizontalAlignment="Left" Height="56" Margin="99,228,0,0" VerticalAlignment="Top" Width="150"/>
@@ -48,7 +59,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Public transport settings">
+            <TabItem Header="Public transport">
                 <Grid Background="#FFFFFFFF">
                     <Label x:Name="apiIdLabel" Content="PTV offical API ID:" HorizontalAlignment="Left" Height="30" Margin="36,52,0,0" VerticalAlignment="Top" Width="110"/>
                     <TextBox x:Name="apiIdTextBox" HorizontalAlignment="Left" Height="22" Margin="175,56,0,0" TextWrapping="Wrap" Text="...ask PTV first!!" VerticalAlignment="Top" Width="317" Grid.ColumnSpan="2"/>
@@ -120,15 +131,17 @@
             </TabItem>
             <TabItem Header="OS Manual Upgrade">
                 <Grid Background="#FFFFFFFF">
-                    <Label x:Name="specEsptoolLabel" Content="Specify ESP Tool flasher:" HorizontalAlignment="Left" Margin="32,36,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="specEsptoolTextBox" HorizontalAlignment="Left" Height="24" Margin="188,38,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="218"/>
-                    <Button x:Name="specEsptoolButton" Content="Choose" HorizontalAlignment="Left" Height="24" Margin="411,38,0,0" VerticalAlignment="Top" Width="82"/>
-                    <Label x:Name="specFwLabel" Content="Apodidae Clock OS Image:" HorizontalAlignment="Left" Margin="32,74,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="specFwTextBox" HorizontalAlignment="Left" Height="24" Margin="188,76,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="218"/>
-                    <Button x:Name="specFwButton" Content="Choose" HorizontalAlignment="Left" Height="24" Margin="411,76,0,0" VerticalAlignment="Top" Width="82"/>
-                    <CheckBox x:Name="fwUpgradeDebugCheckBox" Content="Debug mode" HorizontalAlignment="Left" Height="18" Margin="42,128,0,0" VerticalAlignment="Top" Width="106"/>
-                    <CheckBox x:Name="eraseFlashCheckBox" Content="Erase flash (for developer only)" HorizontalAlignment="Left" Height="18" Margin="185,128,0,0" VerticalAlignment="Top" Width="308"/>
-                    <Button x:Name="performUpdateButton" Content="HERE WE GO!" HorizontalAlignment="Left" Height="52" Margin="101,206,0,0" VerticalAlignment="Top" Width="305"/>
+                    <Label x:Name="specEsptoolLabel" Content="Specify ESP Tool flasher:" HorizontalAlignment="Left" Margin="24,36,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox x:Name="specEsptoolTextBox" HorizontalAlignment="Left" Height="24" Margin="180,38,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="218" Grid.Column="1"/>
+                    <Button x:Name="specEsptoolButton" Content="Choose" HorizontalAlignment="Left" Height="24" Margin="403,38,0,0" VerticalAlignment="Top" Width="82" Grid.Column="1"/>
+                    <Label x:Name="specFwLabel" Content="Apodidae Clock OS Image:" HorizontalAlignment="Left" Margin="24,74,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox x:Name="specFwTextBox" HorizontalAlignment="Left" Height="24" Margin="180,76,0,0" TextWrapping="NoWrap" Text="(...not yet specified)" VerticalAlignment="Top" Width="218" Grid.Column="1"/>
+                    <Button x:Name="specFwButton" Content="Choose" HorizontalAlignment="Left" Height="24" Margin="403,76,0,0" VerticalAlignment="Top" Width="82" Grid.Column="1"/>
+                    <CheckBox x:Name="fwUpgradeDebugCheckBox" Content="Debug mode" HorizontalAlignment="Left" Height="18" Margin="34,128,0,0" VerticalAlignment="Top" Width="106" Grid.Column="1"/>
+                    <CheckBox x:Name="eraseFlashCheckBox" Content="Erase flash (for developer only)" HorizontalAlignment="Left" Height="18" Margin="177,128,0,0" VerticalAlignment="Top" Width="308" Grid.Column="1"/>
+                    <Button x:Name="performUpdateButton" Content="HERE WE GO!" HorizontalAlignment="Left" Height="46" Margin="93,182,0,0" VerticalAlignment="Top" Width="305"/>
+                    <Button x:Name="backupConfigButton" Content="Backup configuration" HorizontalAlignment="Left" Height="30" Margin="93,233,0,0" VerticalAlignment="Top" Width="154"/>
+                    <Button x:Name="restoreConfigButton" Content="Restore configuration" HorizontalAlignment="Left" Height="30" Margin="252,233,0,0" VerticalAlignment="Top" Width="146"/>
                 </Grid>
             </TabItem>
         </TabControl>
